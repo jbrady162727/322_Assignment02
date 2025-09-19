@@ -6,5 +6,6 @@ float add(float x, float y)
 float square(float x)
 float cube(float x)
 float pow(float base, int exponent)
+float sub(float x, float y)
 
 #endif

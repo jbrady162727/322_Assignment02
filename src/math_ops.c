@@ -24,3 +24,12 @@ float pow(float base, int exponent )
     for(int i = 0; i < exponent; i++)
     {
         res *= base;
+    }
+}
+
+float sub(float x, float y)
+{
+    return x - y;
+}
+
+
