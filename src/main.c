@@ -2,15 +2,14 @@ char * AUTHOR_NAME = (char *) "James Brady";
 char * AUTHOR_AUTHORSHIP = (char *) "I acknowledge that I have worked on this assignment independently, except where explicitly noted and referenced. Any collaboration or use of external resources has been properly cited. I am fully aware of the consequences of academic dishonesty and agree to abide by the university's academic integrity policy. I understand the seriousness and implications of plagiarism.";
 
 
-//#define clearBuffer() while (getchar() != '\n');
+#define clearBuffer() while (getchar() != '\n');
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-//#include "code.c"
-//#include "code2.c"
+#include math_ops.c
 
-//#include "tests\tests.c"
+#include "tests\tests.c"
 // ----------------- MAIN PROGRAM -----------------
 
 
@@ -50,6 +49,28 @@ int main(int argc, char *argv[])
             printf("  --power a b          Raise a to the power of b\n");
             printf("  --square a           Square of a number\n");
             printf("  --cube a             Cube of a number\n");
+        }
+
+	else if (strcmp(argv[1], "--addition") == 0 && argc == 4) {
+            printf("%f\n", add(atof(argv[2]), atof(argv[3])));
+    	} 
+    	else if (strcmp(argv[1], "--subtraction") == 0 && argc == 4) {
+            printf("%f\n", sub(atof(argv[2]), atof(argv[3])));
+    	} 
+    	else if (strcmp(argv[1], "--multiplication") == 0 && argc == 4) {
+            printf("%f\n", mul(atof(argv[2]), atof(argv[3])));
+        } 
+        else if (strcmp(argv[1], "--division") == 0 && argc == 4) {
+            printf("%f\n", divide(atof(argv[2]), atof(argv[3])));
+        } 
+        else if (strcmp(argv[1], "--power") == 0 && argc == 4) {
+            printf("%f\n", power(atof(argv[2]), atof(argv[3])));
+        } 
+        else if (strcmp(argv[1], "--square") == 0 && argc == 3) {
+            printf("%f\n", square(atof(argv[2])));
+        } 
+        else if (strcmp(argv[1], "--cube") == 0 && argc == 3) {
+            printf("%f\n", cube(atof(argv[2])));
         }
     }
     else
