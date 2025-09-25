@@ -49,6 +49,7 @@ int main(int argc, char *argv[])
             printf("  --power a b          Raise a to the power of b\n");
             printf("  --square a           Square of a number\n");
             printf("  --cube a             Cube of a number\n");
+            printf("  --sin a              Sine of a number\n");
         }
 
 	else if (strcmp(argv[1], "--addition") == 0 && argc == 4) {
@@ -72,6 +73,9 @@ int main(int argc, char *argv[])
         else if (strcmp(argv[1], "--cube") == 0 && argc == 3) {
             printf("%f\n", cube(atof(argv[2])));
         }
+        else if (strcmp(argv[1], "--sine") == 0 && argc == 4) {
+            printf("%f\n", sin(atof(argv[2])), 10);
+	}
     }
     else
     {

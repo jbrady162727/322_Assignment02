@@ -25,6 +25,7 @@ float pow(float base, int exponent )
     {
         res *= base;
     }
+    return res;
 }
 
 float sub(float x, float y)
@@ -32,4 +33,16 @@ float sub(float x, float y)
     return x - y;
 }
 
+float sin(float x, int steps)
+{
+    float sum = 0.0f;
+    float term = x;
+    int sign = 1;
 
+    for (int n = 1; n <= steps; n++) {
+        sum += sign * term;
+        term *= (x * x) / ((2 * n) * (2 * n + 1));
+        sign = -sign;
+    }
+    return sum;
+}
