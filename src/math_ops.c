@@ -35,18 +35,13 @@ float sub(float x, float y)
 
 float sin(float x, int steps)
 {
-    return 1.0; // Change applied
-}
-
-float cos(float x, int steps)
-{
     float sum = 0.0f;
-    float term = 1.0f;
+    float term = x;
     int sign = 1;
 
     for (int n = 1; n <= steps; n++) {
         sum += sign * term;
-        term *= (x * x) / ((2 * n - 1) * (2 * n));
+        term *= (x * x) / ((2 * n) * (2 * n + 1));
         sign = -sign;
     }
     return sum;
