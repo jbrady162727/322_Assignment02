@@ -46,3 +46,17 @@ float sin(float x, int steps)
     }
     return sum;
 }
+
+float cos(float x, int steps)
+{
+    float sum = 0.0f;
+    float term = 1.0f;
+    int sign = 1;
+
+    for (int n = 1; n <= steps; n++) {
+        sum += sign * term;
+        term *= (x * x) / ((2 * n - 1) * (2 * n));
+        sign = -sign;
+    }
+    return sum;
+}
