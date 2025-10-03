@@ -7,9 +7,8 @@ char * AUTHOR_AUTHORSHIP = (char *) "I acknowledge that I have worked on this as
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#include math_ops.c
-
-#include "tests\tests.c"
+#include "math_ops.c"
+#include "tests.c"
 // ----------------- MAIN PROGRAM -----------------
 
 
