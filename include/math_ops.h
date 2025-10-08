@@ -7,5 +7,7 @@ float square(float x)
 float cube(float x)
 float pow(float base, int exponent)
 float sub(float x, float y)
+float sin(float x, 10)
+float cos(float x, 10)
 
 #endif
