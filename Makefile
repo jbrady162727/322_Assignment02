@@ -1,41 +1,61 @@
-CC = gcc
-CFLAGS = -g -Wall -std=c99 -pedantic
-
+INC_DIR = include
 SRC_DIR = src
 TEST_DIR = tests
-BIN_DIR = bin
 OBJ_DIR = obj
+BIN_DIR = bin
 
 
-APP_OBJS   = $(OBJ_DIR)/main.o $(OBJ_DIR)/code.o
-TEST_OBJS  = $(OBJ_DIR)/tests.o $(OBJ_DIR)/code.o $(OBJ_DIR)/unity.o
+MAIN_OBJ = $(OBJ_DIR)/main.o
+MATH_OBJ = $(OBJ_DIR)/math_ops.o
+UNITY_OBJ = $(OBJ_DIR)/unity.o
+TEST_OBJ = $(OBJ_DIR)/tests.o
 
-APP_TARGET  = $(BIN_DIR)/main.exe
-TEST_TARGET = $(BIN_DIR)/tests.exe
 
-.PHONY: all app test clean
+MAIN_EXE = $(BIN_DIR)/main.exe
+TEST_EXE = $(BIN_DIR)/tests.exe
 
-all: app test
 
-app: $(APP_TARGET)
-test: $(TEST_TARGET)
+CC = gcc
+CFLAGS = -I$(INC_DIR) -I$(TEST_DIR) -Wall -Wextra -std=c11
 
-$(APP_TARGET): $(APP_OBJS)
-	$(CC) $(APP_OBJS) -o $@
 
-$(TEST_TARGET): $(TEST_OBJS)
-	$(CC) $(TEST_OBJS) -o $@
+all: build_dirs $(MAIN_EXE) $(TEST_EXE)
 
-# compilation
-$(OBJ_DIR)/main.o: $(SRC_DIR)/main.c 
-	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR)/code.o: math_ops.c		# $(OBJ_DIR)/code.o: $(SRC_DIR)/code.c
-	$(CC) $(CFLAGS) -c $< -o $@
+build_dirs:
+	mkdir -p $(OBJ_DIR)
+	mkdir -p $(BIN_DIR)
 
-$(OBJ_DIR)/tests.o: $(TEST_DIR)/tests.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJ_DIR)/unity.o: $(TEST_DIR)/unity.c
-	$(CC) $(CFLAGS) -c $< -o $@
 
+$(MAIN_EXE): $(MAIN_OBJ) $(MATH_OBJ)
+	$(CC) $(CFLAGS) $(OBJ_DIR)/main.o $(OBJ_DIR)/math_ops.o -o $(BIN_DIR)/main.exe
+
+
+
+$(TEST_EXE): $(TEST_OBJ) $(MATH_OBJ) $(UNITY_OBJ)
+	$(CC) $(CFLAGS) $(OBJ_DIR)/tests.o $(OBJ_DIR)/math_ops.o $(OBJ_DIR)/unity.o -o $(BIN_DIR)/tests.exe
+
+
+
+$(MAIN_OBJ):
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/main.c -o $(OBJ_DIR)/main.o
+
+$(MATH_OBJ):
+	$(CC) $(CFLAGS) -c $(SRC_DIR)/math_ops.c -o $(OBJ_DIR)/math_ops.o
+
+$(TEST_OBJ):
+	$(CC) $(CFLAGS) -c $(TEST_DIR)/tests.c -o $(OBJ_DIR)/tests.o
+
+$(UNITY_OBJ):
+	$(CC) $(CFLAGS) -c $(TEST_DIR)/unity.c -o $(OBJ_DIR)/unity.o
+
+
+
+clean:
+	rm -f $(OBJ_DIR)/*.o
+	rm -f $(BIN_DIR)/*.exe
+	rmdir --ignore-fail-on-non-empty $(OBJ_DIR) $(BIN_DIR)
+
+
+.PHONY: all clean build_dirs
