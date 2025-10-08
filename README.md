@@ -1,5 +1,3 @@
-hello
-
 # 🧹 Repository Cleanup Assignment
 
 This repository is intentionally **messy**.  
