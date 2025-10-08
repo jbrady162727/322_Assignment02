@@ -1,144 +1,50 @@
-* commit c54028349755bf5be8afac95e173d213f6340838
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 22:31:09 2025 -0600
-| 
-|     Updated .gitignore
-| 
-* commit ec1c820ab64dc7b4035bc337b5e730e276803d73
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 22:27:48 2025 -0600
-| 
-|     Fixed main.c
-| 
-* commit de39d1eb339df09dce8e7a2f0b7dc0999d2e95b0
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 22:20:54 2025 -0600
-| 
-|     Fixed Makefile
-| 
-* commit cefa2bbe02caee54ed0bc466a46d4db06dcae3bb
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 21:57:51 2025 -0600
-| 
-|     Found subtract function in main, so added to math_ops
-| 
-* commit 92fac355b49d93e1e55fe336d2a8c405dadb52dd
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 21:51:46 2025 -0600
-| 
-|     Removed code.c and code2.c
-| 
-* commit dfb598bf9c076eb1da3f74db5a64cb0af00ca33f
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 21:49:42 2025 -0600
-| 
-|     Consolidated math functions
-| 
-* commit 00262d0df3aca2aafc5a7ab5ab900bdd90a898d9
-| Author: James Brady <jbrady@mtech.edu>
-| Date:   Thu Sep 18 21:43:43 2025 -0600
-| 
-|     Moved files and created math_ops.c and math_ops.h
-| 
-* commit 0172015a475989e4132ff786dc58cc01d0f1b3bf
-| Author: Jacob Pach <jpach@mtech.edu>
-| Date:   Tue Sep 16 13:18:55 2025 -0600
-| 
-|     update gitignore
-| 
-* commit b135f73754c9663ec24ff8b99bfa293a4c0d9e08
-| Author: jpach-cs <jlpach@outlook.com>
-| Date:   Mon Sep 15 10:18:29 2025 -0600
-| 
-|     Update README.md
-| 
-* commit ac72030664d874b40f7c25263d11d634e65fb5bb
-| Author: jpach-cs <jlpach@outlook.com>
-| Date:   Fri Sep 12 07:40:11 2025 -0600
-| 
-|     Update README.md
-| 
-* commit 6ef4aa973d153f528af36c61992f6bc19d9e25b0
-| Author: jpach-cs <jlpach@outlook.com>
-| Date:   Fri Sep 12 07:38:26 2025 -0600
-| 
-|     Update README.md
-| 
-* commit d0d54cb34b91099cbd941b6689a8b61c7e997d6b
-| Author: jpach-cs <jlpach@outlook.com>
-| Date:   Fri Sep 12 07:37:19 2025 -0600
-| 
-|     Update README.md
-| 
-* commit 33d73a84aaedfad70cf066c4235bff9f83400aa3
-| Author: jpach-cs <jlpach@outlook.com>
-| Date:   Fri Sep 12 07:36:42 2025 -0600
-| 
-|     Create README.md
-| 
-* commit fb42b831ea271382743302f3607ab2fd105726c7
-| Author: Jacob Pach <jpach@mtech.edu>
-| Date:   Fri Sep 12 07:15:01 2025 -0600
-| 
-|     fix .gitignore
-| 
-* commit 9ed4bb1b5c0103680a0ca0a104309428c2143f7f
-| Author: Jacob Pach <jpach@mtech.edu>
-| Date:   Fri Sep 12 07:13:24 2025 -0600
-| 
-|     add tests/
-|   
-*   commit 3d7e2d6be82361851d3dc1afaacafdf5dbe7e06b
-|\  Merge: faee1ad 17de3fc
-| | Author: Jacob Pach <jpach@mtech.edu>
-| | Date:   Fri Sep 12 07:12:25 2025 -0600
-| | 
-| |     Merge branch 'fixbug2'
-| | 
-| * commit 17de3fc514c17cb4892e8d678b41d3df9d3f1526
-| | Author: Jacob Pach <jpach@mtech.edu>
-| | Date:   Fri Sep 12 07:06:33 2025 -0600
-| | 
-| |     add code2.c
-| |   
-* |   commit faee1ad92a95dcdcc35ffd25c2823cedc70a9fb8
-|\ \  Merge: 7410bbd 7c3ff76
-| | | Author: Jacob Pach <jpach@mtech.edu>
-| | | Date:   Fri Sep 12 07:12:12 2025 -0600
-| | | 
-| | |     Merge branch 'fixbug'
-| | | 
-| * | commit 7c3ff76af2f1245c5be58ee06cd0a6f43f5b76e4
-| | | Author: Jacob Pach <jpach@mtech.edu>
-| | | Date:   Fri Sep 12 07:07:11 2025 -0600
-| | | 
-| | |     add code.c
-| | | 
-| * | commit 1559b41825849b541956a3549332114b3e151be8
-| | | Author: Jacob Pach <jpach@mtech.edu>
-| | | Date:   Fri Sep 12 07:03:12 2025 -0600
-| | | 
-| | |     add ./vscode for vsc
-| | | 
-* | | commit 7410bbd7b220139649e0e2b08b48c448c393d07f
-| |/  Author: Jacob Pach <jpach@mtech.edu>
-|/|   Date:   Fri Sep 12 07:11:00 2025 -0600
-| |   
-| |       add .gitignore
-| | 
-* | commit 2db5c5927ad8031763f120ef983a580a35ad4137
-|/  Author: Jacob Pach <jpach@mtech.edu>
-|   Date:   Fri Sep 12 07:04:36 2025 -0600
-|   
-|       move main.c to /src
-| 
-* commit ceebb9b545b7469b488918e048b1cd936def0533
-  Author: Jacob Pach <jpach@mtech.edu>
-  Date:   Fri Sep 12 07:01:45 2025 -0600
-  
-      add main.c, makefile
+bin\main.exe
+::
+sin(45)
+(null)
+0.000000
+bin\main.exe
+::
+cos(45)
+(null)
+0.000000
 https://github.com/jbrady162727/322_Assignment02.git
-https://github.com/jbrady162727/322_Assignment02.git
+* commit 5d6cb38fd4f15404034966e73d4eb833416f4262
+| Author: James Brady <jbrady@mtech.edu>
+| Date:   Tue Oct 7 23:20:18 2025 -0600
+| 
+|     Add proper Makefile with directory structure
+| 
+* commit 9bfd63c657c27debd5f6e2f6f083e53c4754ed4a
+| Author: James Brady <jbrady@mtech.edu>
+| Date:   Tue Oct 7 23:14:55 2025 -0600
+| 
+|     Fixed header file
+| 
+* commit 55e53e9a95c7c12acc26e059cc94eba2e0c2c226
+| Author: James Brady <jbrady@mtech.edu>
+| Date:   Fri Oct 3 10:44:03 2025 -0600
+| 
+|     Fixed issues with main and math_ops
+| 
+* commit d90fe9b962f1eae9a97b74183975f0f7caee7e61
+| Author: James Brady <jbrady@mtech.edu>
+| Date:   Fri Oct 3 10:35:22 2025 -0600
+| 
+|     Restore cos()
+| 
+* commit cf93d3bd13f5f89bbcfd5e1fea6609ac17d13113
+| Author: James Brady <jbrady@mtech.edu>
+| Date:   Fri Oct 3 10:27:25 2025 -0600
+| 
+|     Restore sin()
+| 
+* commit 7bd4c10c63f167c5f11a4b57c66d040cbabc37bd
+| Author: James Brady <jbrady@mtech.edu>
+| Date:   Wed Sep 24 22:19:29 2025 -0600
+| 
+|     Updated result.txt
+| 
 * commit bde9648b18c5d912f39c2d68d5ab72fd3e547240
 | Author: James Brady <jbrady@mtech.edu>
 | Date:   Wed Sep 24 22:05:42 2025 -0600
@@ -302,3 +208,74 @@ https://github.com/jbrady162727/322_Assignment02.git
   Date:   Fri Sep 12 07:01:45 2025 -0600
   
       add main.c, makefile
+Folder PATH listing for volume Windows
+Volume serial number is 467E-2BA0
+C:.
+¦   .gitignore
+¦   gitignore
+¦   Makefile
+¦   README.md
+¦   result.txt
+¦   
++---.vscode
+¦       launch.json
+¦       settings.json
+¦       tasks.json
+¦       
++---322_Assignment02
+¦   ¦   .gitignore
+¦   ¦   Makefile
+¦   ¦   README.md
+¦   ¦   result.txt
+¦   ¦   
+¦   +---.vscode
+¦   ¦       launch.json
+¦   ¦       settings.json
+¦   ¦       tasks.json
+¦   ¦       
+¦   +---bin
+¦   ¦       main.exe
+¦   ¦       tests.exe
+¦   ¦       
+¦   +---include
+¦   ¦       math_ops.h
+¦   ¦       
+¦   +---obj
+¦   ¦       code.o
+¦   ¦       main.o
+¦   ¦       tests.o
+¦   ¦       unity.o
+¦   ¦       
+¦   +---src
+¦   ¦       main.c
+¦   ¦       math_ops.c
+¦   ¦       
+¦   +---tests
+¦           tests.c
+¦           unity.c
+¦           unity.h
+¦           unity_internals.h
+¦           
++---bin
+¦       main.exe
+¦       tests.exe
+¦       
++---include
+¦       math_ops.h
+¦       
++---obj
+¦       code.o
+¦       main.o
+¦       tests.o
+¦       unity.o
+¦       
++---src
+¦       main.c
+¦       math_ops.c
+¦       
++---tests
+        tests.c
+        unity.c
+        unity.h
+        unity_internals.h
+        
